@@ -1,0 +1,202 @@
+:root {
+    --primary: #00ff41;
+    --bg-dark: #0a0a0a;
+    --bg-card: #151515;
+    --text-main: #e0e0e0;
+    --text-dim: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 100px 10% 50px;
+}
+
+.highlight { color: var(--primary); }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #00ff4110 0%, transparent 70%);
+}
+
+.glitch-text {
+    color: var(--primary);
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+h1 { font-size: 3rem; margin-bottom: 10px; }
+.subtitle { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 30px; }
+
+.btn-primary {
+    background: var(--primary);
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Skills Cards */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-left: 3px solid var(--primary);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background: #1a1a1a;
+}
+
+.skill-card h3 { color: var(--primary); margin-bottom: 15px; }
+.skill-card ul { list-style: none; }
+
+/* Styling Baru untuk Experience & Certs */
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.exp-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #222;
+}
+
+.highlight-border {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+.exp-date {
+    font-size: 0.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.exp-card h3 {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.exp-company {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.exp-card ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.cert-preview {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.cert-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #444;
+}
+
+.cert-img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary);
+}
+
+.img-caption {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .exp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Footer */
+footer {
+    padding: 50px 10%;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.socials { margin: 20px 0; display: flex; justify-content: center; gap: 20px; }
+.socials a { color: var(--primary); text-decoration: none; border: 1px solid var(--primary); padding: 5px 15px; }
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #222;
+    display: inline-block;
+}

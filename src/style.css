@@ -54,6 +54,58 @@ body {
 
 .nav-links a:hover { color: var(--primary); }
 
+/* Styling Hamburger (Default: Sembunyi di Desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001; /* Supaya di atas menu */
+}
+
+.hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #00ff41; /* Warna hijau matrix/cyber kamu */
+    transition: all 0.3s ease;
+}
+
+/* Responsif untuk layar HP (Max-width 768px) */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Sembunyi di kanan luar layar */
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: rgba(10, 10, 10, 0.95); /* Warna gelap transparan */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        border-left: 1px solid #00ff41;
+    }
+
+    .nav-links.active {
+        right: 0; /* Muncul ke layar */
+    }
+
+    /* Animasi Hamburger jadi Silang (X) */
+    .hamburger.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;

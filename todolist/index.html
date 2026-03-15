@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Belajar Aldi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="list-container">
+            <h3>DAFTAR JADWAL BELAJAR</h3>
+            <ul id="schedule-list">
+                </ul>
+        </div>
+        
+        <div class="form-container">
+            <h3>TAMBAH JADWAL BELAJAR</h3>
+            <form id="schedule-form">
+                <div class="form-group">
+                    <label for="date-input">Tanggal:</label>
+                    <input type="date" id="date-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="start-time-input">Mulai Jam:</label>
+                    <input type="time" id="start-time-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="end-time-input">Sampai Jam:</label>
+                    <input type="time" id="end-time-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-input">Topik Belajar:</label>
+                    <input type="text" id="topic-input" placeholder="Masukkan topik belajar..." required>
+                </div>
+                
+                <button type="submit">TAMBAH JADWAL</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

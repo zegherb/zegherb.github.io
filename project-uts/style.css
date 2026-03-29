@@ -1,0 +1,25 @@
+.container {
+    width: 850px;
+    margin: auto;
+}
+
+.header {
+    background: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.form-box {
+    width: 40%;
+    padding: 10px;
+}
+
+.table-box {
+    width: 60%;
+    padding: 10px;
+}
